@@ -21,7 +21,7 @@
     },
     "require": {
         "php": ">=5.6",
-        "symfony-bundles/redis-bundle": "^1.0",
+        "symfony-bundles/redis-bundle": "^2.1",
         "symfony-bundles/bundle-dependency": "^1.0"
     },
     "require-dev": {
