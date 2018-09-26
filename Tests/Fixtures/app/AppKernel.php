@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle\Tests\Fixtures\app;
+namespace lucassaraiva5\QueueBundle\Tests\Fixtures\app;
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Filesystem\Filesystem;
