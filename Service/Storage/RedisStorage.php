@@ -1,8 +1,8 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle\Service\Storage;
+namespace lucassaraiva5\QueueBundle\Service\Storage;
 
-use SymfonyBundles\RedisBundle\Service\ClientInterface;
+use lucassaraiva5\RedisBundle\Service\ClientInterface;
 
 class RedisStorage implements StorageInterface
 {
