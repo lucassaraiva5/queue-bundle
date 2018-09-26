@@ -1,10 +1,10 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle;
+namespace lucassaraiva5\QueueBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use SymfonyBundles\BundleDependency\BundleDependency;
-use SymfonyBundles\BundleDependency\BundleDependencyInterface;
+use lucassaraiva5\BundleDependency\BundleDependency;
+use lucassaraiva5\BundleDependency\BundleDependencyInterface;
 
 class SymfonyBundlesQueueBundle extends Bundle implements BundleDependencyInterface
 {
