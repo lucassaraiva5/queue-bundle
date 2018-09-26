@@ -1,11 +1,11 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle\Tests\DependencyInjection;
+namespace lucassaraiva5\QueueBundle\Tests\DependencyInjection;
 
-use SymfonyBundles\QueueBundle\Tests\TestCase;
+use lucassaraiva5\QueueBundle\Tests\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use SymfonyBundles\QueueBundle\DependencyInjection\QueueExtension;
+use lucassaraiva5\QueueBundle\DependencyInjection\QueueExtension;
 
 class QueueExtensionTest extends TestCase
 {
