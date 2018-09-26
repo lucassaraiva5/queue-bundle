@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle\Tests;
+namespace lucassaraiva5\QueueBundle\Tests;
 
 class Kernel
 {
