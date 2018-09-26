@@ -1,9 +1,9 @@
 {
-    "name": "symfony-bundles/queue-bundle",
+    "name": "lucassaraiva5/queue-bundle",
     "type": "symfony-bundle",
     "description": "Symfony Queue Bundle",
     "keywords": ["queue", "redis", "symfony", "bundle", "fifo"],
-    "homepage": "https://github.com/symfony-bundles/queue-bundle",
+    "homepage": "https://github.com/lucassaraiva5/queue-bundle",
     "license": "MIT",
     "authors": [
         {
