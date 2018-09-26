@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle\Tests;
+namespace lucassaraiva5\QueueBundle\Tests;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase
 {
