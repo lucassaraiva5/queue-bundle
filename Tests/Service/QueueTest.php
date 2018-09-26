@@ -1,8 +1,8 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle\Tests\Service;
+namespace lucassaraiva5\QueueBundle\Tests\Service;
 
-use SymfonyBundles\QueueBundle\Tests\TestCase;
+use lucassaraiva5\QueueBundle\Tests\TestCase;
 
 class QueueTest extends TestCase
 {

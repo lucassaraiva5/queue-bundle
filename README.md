@@ -15,7 +15,7 @@ Installation
 * Require the bundle with composer:
 
 ``` bash
-composer require symfony-bundles/queue-bundle
+composer require lucassaraiva5/queue-bundle
 ```
 
 * Enable the bundle in the kernel:
@@ -25,7 +25,7 @@ public function registerBundles()
 {
     $bundles = [
         // ...
-        new SymfonyBundles\QueueBundle\SymfonyBundlesQueueBundle(),
+        new lucassaraiva5\QueueBundle\SymfonyBundlesQueueBundle(),
         // ...
     ];
     ...
@@ -39,13 +39,13 @@ Defaults configuration:
 sb_queue:
     service:
         alias: 'queue' # alias for service `sb_queue` (e.g. $this->get('queue'))
-        class: 'SymfonyBundles\QueueBundle\Service\Queue'
+        class: 'lucassaraiva5\QueueBundle\Service\Queue'
         storage: 'redis' # storage key from `queue.storages` section
     settings:
         queue_default_name: 'queue:default' # default name for queue
     storages:
         redis:
-            class: 'SymfonyBundles\QueueBundle\Service\Storage\RedisStorage'
+            class: 'lucassaraiva5\QueueBundle\Service\Storage\RedisStorage'
             client: 'sb_redis.client.default' # storage client service id
 ```
 
@@ -57,7 +57,7 @@ A simple example of the use of the queue:
 ``` php
 $queue = $this->get('sb_queue'); // get the service
 // or use: $this->get('queue'); the `queue` service use as alias,
-// which setting in config.yml in parameter service_name
+// which setting in config.yml in parameter `sb_queue.service.alias`
 
 // adding some data to queue
 $queue->push('User "demo" registered');
@@ -66,6 +66,18 @@ $queue->push(new \stdClass);
 
 // get count of items from queue
 $queue->count(); // returns integer: 3
+```
+
+``` php
+// now, we can get the data at any time in the queue order
+
+// get data from queue
+$queue->pop(); // returns string: User "demo" registered
+$queue->count(); // returns integer: 2
+$queue->pop(); // returns integer: 1234567890
+$queue->count(); // returns integer: 1
+$queue->pop(); // returns object: object(stdClass)
+$queue->count(); // returns integer: 0
 ```
 
 If you want to change the queue:
@@ -81,18 +93,6 @@ $queue->push('User with ID 123 changed password');
 // adding data to default queue
 $queue->setName('queue:default');
 $queue->push('To be or not to be');
-```
-
-``` php
-// now, we can get the data at any time in the queue order
-
-// get data from queue
-$queue->pop(); // returns string: User "demo" registered
-$queue->count(); // returns integer: 2
-$queue->pop(); // returns integer: 1234567890
-$queue->count(); // returns integer: 1
-$queue->pop(); // returns object: object(stdClass)
-$queue->count(); // returns integer: 0
 ```
 
 [package-link]: https://packagist.org/packages/symfony-bundles/queue-bundle

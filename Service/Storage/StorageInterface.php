@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle\Service\Storage;
+namespace lucassaraiva5\QueueBundle\Service\Storage;
 
 interface StorageInterface
 {

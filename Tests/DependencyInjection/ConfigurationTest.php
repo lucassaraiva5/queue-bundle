@@ -1,11 +1,11 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle\Tests\DependencyInjection;
+namespace lucassaraiva5\QueueBundle\Tests\DependencyInjection;
 
-use SymfonyBundles\QueueBundle\Tests\TestCase;
+use lucassaraiva5\QueueBundle\Tests\TestCase;
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
-use SymfonyBundles\QueueBundle\DependencyInjection\Configuration;
+use lucassaraiva5\QueueBundle\DependencyInjection\Configuration;
 
 class ConfigurationTest extends TestCase
 {
