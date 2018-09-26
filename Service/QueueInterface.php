@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle\Service;
+namespace lucassaraiva5\QueueBundle\Service;
 
 interface QueueInterface
 {
