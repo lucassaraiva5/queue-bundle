@@ -1,8 +1,8 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle\DependencyInjection;
+namespace lucassaraiva5\QueueBundle\DependencyInjection;
 
-use SymfonyBundles\QueueBundle\Service;
+use lucassaraiva5\QueueBundle\Service;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
