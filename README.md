@@ -15,7 +15,7 @@ Installation
 * Require the bundle with composer:
 
 ``` bash
-composer require symfony-bundles/queue-bundle
+composer require lucassaraiva5/queue-bundle
 ```
 
 * Enable the bundle in the kernel:
@@ -25,7 +25,7 @@ public function registerBundles()
 {
     $bundles = [
         // ...
-        new SymfonyBundles\QueueBundle\SymfonyBundlesQueueBundle(),
+        new lucassaraiva5\QueueBundle\SymfonyBundlesQueueBundle(),
         // ...
     ];
     ...
@@ -39,13 +39,13 @@ Defaults configuration:
 sb_queue:
     service:
         alias: 'queue' # alias for service `sb_queue` (e.g. $this->get('queue'))
-        class: 'SymfonyBundles\QueueBundle\Service\Queue'
+        class: 'lucassaraiva5\QueueBundle\Service\Queue'
         storage: 'redis' # storage key from `queue.storages` section
     settings:
         queue_default_name: 'queue:default' # default name for queue
     storages:
         redis:
-            class: 'SymfonyBundles\QueueBundle\Service\Storage\RedisStorage'
+            class: 'lucassaraiva5\QueueBundle\Service\Storage\RedisStorage'
             client: 'sb_redis.client.default' # storage client service id
 ```
 
