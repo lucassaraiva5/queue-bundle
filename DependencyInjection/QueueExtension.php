@@ -1,6 +1,6 @@
 <?php
 
-namespace SymfonyBundles\QueueBundle\DependencyInjection;
+namespace lucassaraiva5\QueueBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\Definition;
