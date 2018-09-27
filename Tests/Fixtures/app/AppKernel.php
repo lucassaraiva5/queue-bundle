@@ -19,7 +19,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new \SymfonyBundles\QueueBundle\SymfonyBundlesQueueBundle(),
+            new \lucassaraiva5\QueueBundle\SymfonyBundlesQueueBundle(),
         ];
 
         return $bundles;

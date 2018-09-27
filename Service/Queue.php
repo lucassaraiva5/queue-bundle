@@ -2,6 +2,8 @@
 
 namespace lucassaraiva5\QueueBundle\Service;
 
+use SymfonyBundles\RedisBundle\Redis\Client;
+
 class Queue implements QueueInterface
 {
     /**
@@ -9,10 +11,14 @@ class Queue implements QueueInterface
      */
     private $name;
 
-    /**
-     * @var Storage\StorageInterface
-     */
     private $storage;
+
+    public function __construct(Client $storage)
+    {
+        $this->name = "default";
+        $this->setStorage($storage);
+    }
+
 
     /**
      * {@inheritdoc}
@@ -33,7 +39,7 @@ class Queue implements QueueInterface
     /**
      * {@inheritdoc}
      */
-    public function setStorage(Storage\StorageInterface $storage)
+    public function setStorage(Client $storage)
     {
         $this->storage = $storage;
     }
@@ -43,7 +49,7 @@ class Queue implements QueueInterface
      */
     public function pop()
     {
-        return $this->storage->first($this->name);
+        return $this->storage->pop($this->name);
     }
 
     /**
@@ -51,7 +57,7 @@ class Queue implements QueueInterface
      */
     public function push($value)
     {
-        $this->storage->append($this->name, $value);
+        $this->storage->push($this->name, $value);
     }
 
     /**
