@@ -49,9 +49,7 @@ How to use
 ----------
 A simple example of the use of the queue:
 ``` php
-$queue = $this->get('sb_queue'); // get the service
-// or use: $this->get('queue'); the `queue` service use as alias,
-// which setting in config.yml in parameter `sb_queue.service.alias`
+$queue = $this->get('ls5_queue'); // get the service
 
 // adding some data to queue
 $queue->push('User "demo" registered');
