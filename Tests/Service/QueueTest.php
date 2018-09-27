@@ -7,7 +7,7 @@ use lucassaraiva5\QueueBundle\Tests\TestCase;
 class QueueTest extends TestCase
 {
     /**
-     * @var \SymfonyBundles\QueueBundle\Service\QueueInterface
+     * @var \lucassaraiva5\QueueBundle\Service\QueueInterface
      */
     protected $queue;
 

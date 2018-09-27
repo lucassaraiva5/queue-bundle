@@ -7,7 +7,7 @@ use lucassaraiva5\QueueBundle\Tests\TestCase;
 class RedisStorageTest extends TestCase
 {
     /**
-     * @var \SymfonyBundles\QueueBundle\Service\Storage\StorageInterface
+     * @var \lucassaraiva5\QueueBundle\Service\Storage\StorageInterface
      */
     private $storage;
 

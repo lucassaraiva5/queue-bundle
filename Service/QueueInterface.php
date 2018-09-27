@@ -2,6 +2,8 @@
 
 namespace lucassaraiva5\QueueBundle\Service;
 
+use SymfonyBundles\RedisBundle\Redis\Client;
+
 interface QueueInterface
 {
     /**
@@ -9,7 +11,7 @@ interface QueueInterface
      *
      * @param Storage\StorageInterface $storage
      */
-    public function setStorage(Storage\StorageInterface $storage);
+    public function setStorage(Client $storage);
 
     /**
      * Sets the name of the queue list.
