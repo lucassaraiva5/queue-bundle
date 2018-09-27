@@ -3,8 +3,8 @@
 namespace lucassaraiva5\QueueBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use lucassaraiva5\BundleDependency\BundleDependency;
-use lucassaraiva5\BundleDependency\BundleDependencyInterface;
+use SymfonyBundles\BundleDependency\BundleDependency;
+use SymfonyBundles\BundleDependency\BundleDependencyInterface;
 
 class SymfonyBundlesQueueBundle extends Bundle implements BundleDependencyInterface
 {

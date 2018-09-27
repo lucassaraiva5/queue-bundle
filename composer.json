@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "SymfonyBundles\\QueueBundle\\": ""
+            "lucassaraiva5\\QueueBundle\\": ""
         },
         "exclude-from-classmap": [
             "/Tests/"
