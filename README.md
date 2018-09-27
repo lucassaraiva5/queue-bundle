@@ -32,7 +32,7 @@ public function registerBundles()
 }
 ```
 
-* Configure the queue bundle in your config.yml.
+* Configure the queue bundle in your services.yaml.
 
 Defaults configuration:
 ``` yml
