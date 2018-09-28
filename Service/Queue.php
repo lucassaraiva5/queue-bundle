@@ -67,4 +67,18 @@ class Queue implements QueueInterface
     {
         return $this->storage->count($this->name);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function first()
+    {
+        $list = $this->storage->lrange($this->name, 0, -1);
+
+        if(count($list) > 0) {
+            return $list[0];
+        }
+
+        return null;
+    }
 }
