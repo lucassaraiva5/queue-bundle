@@ -32,21 +32,15 @@ public function registerBundles()
 }
 ```
 
-* Configure the queue bundle in your config.yml.
+* Configure the queue bundle in your services.yaml.
 
 Defaults configuration:
 ``` yml
-sb_queue:
-    service:
-        alias: 'queue' # alias for service `sb_queue` (e.g. $this->get('queue'))
-        class: 'lucassaraiva5\QueueBundle\Service\Queue'
-        storage: 'redis' # storage key from `queue.storages` section
-    settings:
-        queue_default_name: 'queue:default' # default name for queue
-    storages:
-        redis:
-            class: 'lucassaraiva5\QueueBundle\Service\Storage\RedisStorage'
-            client: 'sb_redis.client.default' # storage client service id
+    ls5_queue:
+        public: true
+        class: lucassaraiva5\QueueBundle\Service\Queue
+        arguments:
+            $storage: '@sb_redis.default'
 ```
 
 * Configure the redis client in your config.yml. Read more about [RedisBundle configuration][redis-bundle-link].
@@ -55,9 +49,7 @@ How to use
 ----------
 A simple example of the use of the queue:
 ``` php
-$queue = $this->get('sb_queue'); // get the service
-// or use: $this->get('queue'); the `queue` service use as alias,
-// which setting in config.yml in parameter `sb_queue.service.alias`
+$queue = $this->get('ls5_queue'); // get the service
 
 // adding some data to queue
 $queue->push('User "demo" registered');
