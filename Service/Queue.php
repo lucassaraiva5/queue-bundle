@@ -13,9 +13,9 @@ class Queue implements QueueInterface
 
     private $storage;
 
-    public function __construct(Client $storage)
+    public function __construct(Client $storage, $name)
     {
-        $this->name = "default";
+        $this->name = $name;
         $this->setStorage($storage);
     }
 
